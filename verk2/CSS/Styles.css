@@ -1,0 +1,78 @@
+/*Styles*/
+form {
+  display:flex;
+  flex-direction: column;
+}
+
+/* MIX
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.fela {
+  display: none;
+}
+.bottom {
+  background-color:#96E9D7;
+}
+.numbers {
+  color: white;
+}
+.circle { 
+  width: 120px;
+  line-height: 120px;
+  border-radius: 50%;
+  text-align: center;
+  border: 3px solid white;
+}
+.simi {
+  transform: rotate(10deg);
+}
+
+/*----------------------------------*/
+table {
+    border: 1px solid rgb(255, 255, 255);
+    /*background-image:linear-gradient(rgb(113, 243, 167), rgb(62, 135, 138));*/
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    table-layout: fixed;
+    width: 100%;
+  }
+  
+  table tr {
+    /*background-color: #89eb71;*/
+    border: 1px solid #ddd;
+    padding: .35em;
+  }
+  
+  table th,
+  table td {
+    padding: .625em;
+    text-align: center;
+  }
+  @media screen and (max-width: 600px) {
+    table thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    
+    table tr {
+      border-bottom: 3px solid #ddd;
+      display: block;
+    }
+    
+    table td {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      text-align: right;
+    }
+    
+    table td::before {
+      content: attr(data-label);
+      float: left;
+    }
+  }
