@@ -1,0 +1,314 @@
+/*Styles*/
+
+/*MIX*/
+.fela {
+	display: none;
+  }
+  .bottom {
+	background-color:#96E9D7;
+  }
+  .numbers {
+	color: white;
+  }
+  .circle { 
+	width: 120px;
+	line-height: 120px;
+	border-radius: 50%;
+	text-align: center;
+	border: 3px solid white;
+  }
+  .simi {
+	transform: rotate(10deg);
+  }
+  .groovy {
+	color: white;
+	display: block;
+	text-align: left;
+	padding-top: 20px;
+	padding-left: 15px;
+  }  
+  
+
+/*fellilista letra litur*/
+.fellilisti li a {
+  color:white
+}
+/*fela fellilista iconið*/
+.fellilisti label {
+  display: none;
+}/*----------------------*/
+
+/*dropdown checkboxið*/
+#drop {
+  display: none;
+}/*------------------*/
+
+/*Main logo css kóði*/
+#mainlogo {
+  padding-top: 5em;
+  padding-bottom: 0em;
+}
+/*------------------*/
+/*CSS kóðinn fyrir útfylliformið*/
+form {
+  display:flex;
+  flex-direction: column;
+}
+/*------------------------------*/
+
+/*CSS kóði fyrir fótinn--------------------------*/
+.bottom {
+    background-color: aquamarine;
+}
+/*-----------------------------------------------*/
+
+/*CSS kóði fyrir töfluna-----------------*/
+table {
+    border: 1px solid rgb(255, 255, 255);
+    /*background-image:linear-gradient(rgb(113, 243, 167), rgb(62, 135, 138)); */
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    table-layout: fixed;
+    width: 100%;
+  }
+  table tr {
+    border: 1px solid #ddd;
+    padding: .35em;
+  }
+  table th,
+  table td {
+    padding: .625em;
+    text-align: center;
+  }
+/*------------------------------------------*/
+
+
+  @media screen and (max-width: 600px) {/*Viðmið 600px þegar skjárinn verður 600px að minnsta*/
+    table thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    table tr {
+      border-bottom: 3px solid #ddd;
+      display: block;
+    }
+    table td {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      text-align: right;
+    }
+    table td::before {
+      content: attr(data-label);
+      float: left;
+    }
+  }
+/* Giving a background-color to the nav container. */
+nav { 
+	margin:0;
+	padding: 0;
+	background-color: #254441;
+}
+
+#logo {
+	display: block;
+	padding: 0 30px;
+	float: left;
+	font-size:20px;
+	line-height: 60px;
+}
+nav:after {
+	content:"";
+	display:table;
+	clear:both;
+}
+nav ul {
+	float: right;
+	padding:0;
+	margin:0;
+	list-style: none;
+	position: relative;
+	}
+	
+nav ul li {
+    float: left;
+	margin: 0px;
+	}
+
+/* Styling the links */
+nav a {
+	display:block;
+	padding:14px 20px;	
+	color:#FFF;
+	font-size:17px;
+	text-decoration:none;
+}
+
+nav ul li ul li:active { background: #000000; }
+
+/* Background color change on Hover */
+nav a:hover { 
+	background-color: rgb(0, 0, 0); 
+}
+
+/* Hide Dropdowns by Default
+ * and giving it a position of absolute */
+nav ul ul {
+	display: none;
+	position: absolute; 
+	/* has to be the same number as the "line-height" of "nav a" */
+	top: 60px; 
+}
+	
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+	display:inherit;
+}
+	
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+	width:170px;
+	float:none;
+	display:list-item;
+	position: relative;
+}
+
+/* Second, Third and more Tiers	
+ * We move the 2nd and 3rd etc tier dropdowns to the left
+ * by the amount of the width of the first tier.
+*/
+nav ul ul ul li {
+	position: relative;
+	top:-60px;
+	/* has to be the same number as the "width" of "nav ul ul li" */ 
+	left:170px; 
+}
+
+	
+/* Change ' +' in order to change the Dropdown symbol */
+li > a:after { content:  ' +'; }
+li > a:only-child:after { content: ''; }
+
+
+/* Media Queries
+--------------------------------------------- */
+
+@media all and (max-width : 768px) {
+	#logo {
+		display: block;
+		padding: 0;
+    padding-top: 6px;
+		width: 100%;
+		text-align: center;
+		float: none;
+	}
+  
+	nav {
+		margin: 0;
+	}
+  .fellilisti label {
+    display: block;
+  }
+	/* Hide the navigation menu by default */
+	/* Also hide the  */
+	.toggle + a,
+	.menu {
+		display: none;
+	}
+  
+	/* Stylinf the toggle lable */
+	.toggle {
+		display: block;
+		background-color: #254441;
+		padding:14px 20px;	
+		color:#FFF;
+		font-size:17px;
+		text-decoration:none;
+		border:none;
+	}
+
+	.toggle:active {
+		background-color: #000000;
+  }
+
+	/* Display Dropdown when clicked on Parent Lable */
+	[id^=drop]:checked + ul {
+		display: block;
+	}
+
+	/* Change menu item's width to 100% */
+	nav ul li {
+		display: block;
+		width: 100%;
+		}
+
+	nav ul ul .toggle,
+	nav ul ul a {
+		padding: 0 40px;
+	}
+
+	nav ul ul ul a {
+		padding: 0 80px;
+	}
+
+	nav a:hover,
+ 	nav ul ul ul a {
+		background-color: rgb(0, 0, 0);
+	}
+  
+	nav ul li ul li .toggle,
+	nav ul ul a,
+  nav ul ul ul a{
+		padding:14px 20px;	
+		color:#FFF;
+		font-size:17px; 
+	}
+  
+  
+	nav ul li ul li .toggle,
+	nav ul ul a {
+		background-color: #212121; 
+	}
+
+	/* Hide Dropdowns by Default */
+	nav ul ul {
+		float: none;
+		position:static;
+		color: #ffffff;
+		/* has to be the same number as the "line-height" of "nav a" */
+	}
+		
+	/* Hide menus on hover */
+	nav ul ul li:hover > ul,
+	nav ul li:hover > ul {
+		display: none;
+	}
+		
+	/* Fisrt Tier Dropdown */
+	nav ul ul li {
+		display: block;
+		width: 100%;
+	}
+
+	/*nav ul ul ul li {
+		position: static
+
+	}*/
+
+}
+
+
+@media all and (max-width : 330px) {
+
+	nav ul li {
+		display:block;
+		width: 94%;
+	}
+
+}
